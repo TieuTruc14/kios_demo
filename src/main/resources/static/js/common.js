@@ -1,4 +1,4 @@
-var app = angular.module('dash', ["ngSanitize"]);
+var app = angular.module('kios', ["ngSanitize"]);
 // var app = angular.module('qms', []);
 
 //Bat ky tu

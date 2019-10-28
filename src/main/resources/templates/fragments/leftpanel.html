@@ -6,7 +6,7 @@
 </head>
 <body>
 <th-block th:fragment="leafpanel">
-<aside class="bg-dark lter b-r aside-md hidden-print hidden-xs " id="nav" >
+<aside class="bg-light lter b-r aside-md hidden-print hidden-xs " id="nav" >
     <section class="vbox">
         <header class="header bg-primary lter text-center clearfix">
             <div class="btn-group">
@@ -20,7 +20,7 @@
             <div class="slim-scroll" data-height="auto" data-disable-fade-out="true" data-distance="0" data-size="5px" data-color="#333333">
                 <nav class="nav-primary hidden-xs">
                     <ul class="nav">
-                        <li class=""  th:classappend="active"><a th:href="@{/home}">
+                        <li class=""  th:classappend="active"><a th:href="@{/map}">
                         <i class="fa fa-dashboard icon">
                             <b class="bg-info"></b>
                         </i><span>Sơ đồ bệnh viện</span></a>
@@ -36,15 +36,15 @@
                         </li>
                         <li th:classappend="${T(com.isofh.bvp.dashboard.common.Utils).isActive(#httpServletRequest.getContextPath()+'/search', #httpServletRequest)} ? 'active' : '' "><a href="#" class=""> <i class="fa fa-search icon"> <b class="bg-primary"></b> </i> <span class="pull-right"> <i class="fa fa-angle-down text"></i> <i class="fa fa-angle-up text-active"></i> </span> <span>Tra cứu giá DV</span> </a>
                             <ul class="nav lt">
-                                <li class="" th:classappend="${T(com.isofh.bvp.dashboard.common.Utils).isActive(#httpServletRequest.getContextPath()+'/search/price', #httpServletRequest)} ? 'active' : '' "><a th:href="@{/search/price}" class=""> <i class="fa fa-angle-right"></i> <span>Bảng giá DV</span> </a></li>
+                                <li class="" th:classappend="${T(com.isofh.bvp.dashboard.common.Utils).isActive(#httpServletRequest.getContextPath()+'/search/service', #httpServletRequest)} ? 'active' : '' "><a th:href="@{/search/service}" class=""> <i class="fa fa-angle-right"></i> <span>Bảng giá DV</span> </a></li>
                                 <li class="" th:classappend="${T(com.isofh.bvp.dashboard.common.Utils).isActive(#httpServletRequest.getContextPath()+'/search/result', #httpServletRequest)} ? 'active' : '' "><a th:href="@{/search/result}" class=""> <i class="fa fa-angle-right"></i> <span>KQ DV</span> </a></li>
                             </ul>
                         </li>
-                        <li th:classappend="${T(com.isofh.bvp.dashboard.common.Utils).isActive(#httpServletRequest.getContextPath()+'/survey', #httpServletRequest)} ? 'active' : '' "><a href="#" class=""> <i class="fa fa-file-text icon"> <b class="bg-primary"></b> </i> <span class="pull-right"> <i class="fa fa-angle-down text"></i> <i class="fa fa-angle-up text-active"></i> </span> <span>Khảo sát mức hài lòng</span> </a>
+                        <li th:classappend="${T(com.isofh.bvp.dashboard.common.Utils).isActive(#httpServletRequest.getContextPath()+'/survey', #httpServletRequest)} ? 'active' : '' "><a href="#" class=""> <i class="fa fa-file-text icon"> <b class="bg-primary"></b> </i> <span class="pull-right"> <i class="fa fa-angle-down text"></i> <i class="fa fa-angle-up text-active"></i> </span> <span>K/S mức hài lòng</span> </a>
                             <ul class="nav lt">
-                                    <li class="" th:classappend="${T(com.isofh.bvp.dashboard.common.Utils).isActive(#httpServletRequest.getContextPath()+'/survey/op', #httpServletRequest)} ? 'active' : '' "><a th:href="@{/survey/op}" class=""> <i class="fa fa-angle-right"></i> <span>NB ngoại trú</span> </a></li>
-                                    <li class="" th:classappend="${T(com.isofh.bvp.dashboard.common.Utils).isActive(#httpServletRequest.getContextPath()+'/survey/ip', #httpServletRequest)} ? 'active' : '' "><a th:href="@{/survey/ip}" class=""> <i class="fa fa-angle-right"></i> <span>NB nội trú</span> </a></li>
-                                    <li class="" th:classappend="${T(com.isofh.bvp.dashboard.common.Utils).isActive(#httpServletRequest.getContextPath()+'/survey/staff', #httpServletRequest)} ? 'active' : '' "><a th:href="@{/survey/staff}" class=""> <i class="fa fa-angle-right"></i> <span>Nhân viên BV</span> </a></li>
+                                    <li class="" th:classappend="${T(com.isofh.bvp.dashboard.common.Utils).isActive(#httpServletRequest.getContextPath()+'/survey', #httpServletRequest)} ? 'active' : '' "><a th:href="@{/survey}" class=""> <i class="fa fa-angle-right"></i> <span>NB ngoại trú</span> </a></li>
+                                    <li class="" th:classappend="${T(com.isofh.bvp.dashboard.common.Utils).isActive(#httpServletRequest.getContextPath()+'/survey/ip', #httpServletRequest)} ? 'active' : '' "><a th:href="@{/survey}" class=""> <i class="fa fa-angle-right"></i> <span>NB nội trú</span> </a></li>
+                                    <li class="" th:classappend="${T(com.isofh.bvp.dashboard.common.Utils).isActive(#httpServletRequest.getContextPath()+'/survey/staff', #httpServletRequest)} ? 'active' : '' "><a th:href="@{/survey}" class=""> <i class="fa fa-angle-right"></i> <span>Nhân viên BV</span> </a></li>
                             </ul>
                         </li>
                     </ul>

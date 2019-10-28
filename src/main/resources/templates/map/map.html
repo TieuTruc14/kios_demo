@@ -3,29 +3,24 @@
 <head>
     <title>Isofh</title>
     <div th:replace="fragments/header :: header-common"/>
-    <script th:src="@{/js/project/search/service.js}"></script>
+<!--    <script th:src="@{/js/project/search/service.js}"></script>-->
 </head>
 <body>
 <section class="vbox">
     <div th:replace="fragments/header :: header-menu"/>
     <section>
-        <section class="hbox stretch" ng-app="kios" ng-controller="kiosCtrl">
+        <section class="hbox stretch" >
             <aside th:replace="fragments/leftpanel :: leafpanel" />
             <section id="content">
                 <section class="vbox">
                     <section class="scrollable padder">
                         <ul class="breadcrumb no-border no-radius b-b b-light pull-in">
-                            <li><a href="/"><i class="fa fa-home"></i>&nbsp;Home</a></li>
+                            <li><a href="<%=request.getContextPath()%>/"><i class="fa fa-home"></i>&nbsp;Home</a></li>
+                            <li><a href="#">Sơ đồ</a></li>
                         </ul>
-                        <section id="main" class="panel panel-default">
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="col-lg-8">
-                                    </div>
-                                    <div class="col-lg-4">
-                                    </div>
-                                </div>
-                            </div>
+
+                        <section class="panel panel-default">
+                            <img th:src="@{/images/dkpn.jpg}" style="width:80%;"/>
                         </section>
                     </section>
                 </section>

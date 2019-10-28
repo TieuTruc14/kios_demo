@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en" class="app">
+<head>
+    <title>QTKCB_BHYT</title>
+    <div th:replace="fragments/header :: header-common"/>
+    <script th:src="@{/js/project/search/service.js}"></script>
+</head>
+<body>
+<section class="vbox">
+    <div th:replace="fragments/header :: header-menu"/>
+    <section>
+        <section class="hbox stretch" ng-app="kios" ng-controller="kiosCtrl">
+            <aside th:replace="fragments/leftpanel :: leafpanel"/>
+            <section id="content">
+                <section class="vbox">
+                    <section class="scrollable padder">
+                        <ul class="breadcrumb no-border no-radius b-b b-light pull-in">
+                            <li><a href="/"><i class="fa fa-home"></i>&nbsp;Home</a></li>
+                        </ul>
+
+                        <div class="container">
+                            <h2>Xin cho tôi biết mức độ hài lòng của bạn!</h2>
+                            <form action="#">
+                                <div class="form-group">
+                                    <label>Ngày:</label>
+                                    <input class="form-control">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Tuổi:</label>
+                                    <input class="form-control">
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label>Số điện thoại:</label>
+                                    <input class="form-control">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Số di động:</label>
+                                    <input class="form-control">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Tổng số ngày nằm viện:</label>
+                                    <input class="form-control">
+                                </div>
+                                <div class="row">
+                                    <div style="border-radius:50%;  border: 1px solid #333; width: 30px; text-align:center; padding: 5px; float:left;">
+                                        1
+                                    </div>
+                                    <p style="margin-top:5px;"> Rất không hài lòng hoặc rất kém.</p>
+                                </div>
+                                <div class="row">
+                                    <div style="border-radius:50%;  border: 1px solid #333; width: 30px; text-align:center; padding: 5px; float:left;">
+                                        2
+                                    </div>
+                                    <p style="margin-top:5px;"> Không hài lòng hoặc kém.</p>
+                                </div>
+                                <div class="row">
+                                    <div style="border-radius:50%;  border: 1px solid #333; width: 30px; text-align:center; padding: 5px; float:left;">
+                                        3
+                                    </div>
+                                    <p style="margin-top:5px;"> Bình thường hoặc trung bình</p>
+                                </div>
+                                <div class="row">
+                                    <div style="border-radius:50%;  border: 1px solid #333; width: 30px; text-align:center; padding: 5px; float:left;">
+                                        4
+                                    </div>
+                                    <p style="margin-top:5px;"> Hài lòng hoặc tốt.</p>
+                                </div>
+                                <div class="row">
+                                    <div style="border-radius:50%;  border: 1px solid #333; width: 30px; text-align:center; padding: 5px; float:left;">
+                                        5
+                                    </div>
+                                    <p style="margin-top:5px;"> Rất hài lòng hoặc rất tốt.</p>
+                                </div>
+                                <br>
+
+                                <h4>A. Khả năng tiếp cận</h4>
+                                <div class="row">
+                                    <p style="padding: 5px; float:left;">A1. Các sơ đồ, biển báo chỉ dẫn đường đến các khoa, phòng trong bệnh viện
+                                        rõ ràng, dễ hiểu, dễ tìm.</p>
+                                    <p><select>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select></p>
+                                </div>
+
+                                <div class="row">
+                                    <p style="padding: 5px; float:left;">A2. Thời gian vào thăm người bệnh được thông báo rõ ràng.</p>
+                                    <p><select>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select></p>
+                                </div>
+
+                                <div class="row">
+                                    <p style="padding: 5px; float:left;">A3. Các khối nhà, cầu thang, buồng bệnh được đánh số rõ ràng, dễ tìm.</p>
+                                    <p><select>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select></p>
+                                </div>
+
+                                <div class="row">
+                                    <p style="padding: 5px; float:left;">A4. Các lối đi trong bệnh viện, hành lang bằng phẳng, dễ đi.</p>
+                                    <p><select>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select></p>
+                                </div>
+
+                                <div class="row">
+                                    <p style="padding: 5px; float:left;">A5. Người bệnh hỏi và gọi được nhân viên y tế khi cần thiết.</p>
+                                    <p><select>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select></p>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary" style="margin-bottom: 20px;"> Gửi </button>
+                            </form>
+                        </div>
+
+
+                    </section>
+                </section>
+                <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen" data-target="#nav"></a>
+            </section>
+            <!--end content-->
+        </section>
+    </section>
+</section>
+<div th:replace="fragments/footer :: footer-common"/>
+
+</body>
+</html>
